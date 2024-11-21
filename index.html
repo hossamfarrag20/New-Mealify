@@ -30,8 +30,8 @@
             </div>
             <div class="nav-title nav-title-right">
                 <span id="enableDarkModeBtn" onclick="darkmodes()" class="dark"><i class="fa-solid fa-moon"></i></span>
-                <span id="enableWhiteModeBtn" onclick="whitemode()" class="white"><i
-                        class="fa-regular fa-sun"></i></span>
+                <!-- <span id="enableWhiteModeBtn" onclick="whitemode()" class="white"><i
+                        class="fa-regular fa-sun"></i></span> -->
                 <div class="nav-items">
                     <a href="#side-bar">
                         <i class="fa-solid fa-bars"></i>
@@ -158,8 +158,10 @@
                     <div class="galler-image-container">
                         <img src="./images/meal-1.jpg" alt="Pizza slice">
                         <div class="image-container-des">
-                            <h2>Pizza</h2>
-                            <p>Hawaiian pizza with ham and pineapple</p>
+                            <div class="des-text-cont">
+                                <h2>Pizza</h2>
+                                <p>Hawaiian pizza with ham and pineapple</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,8 +169,10 @@
                     <div class="galler-image-container">
                         <img src="./images/meal-3.jpg" alt="Burger">
                         <div class="image-container-des">
-                            <h2>Burger</h2>
-                            <p>grass fed bison hamburger with chips & beer</p>
+                            <div class="des-text-cont">
+                                <h2>Burger</h2>
+                                <p>grass fed bison hamburger with chips & beer</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -176,8 +180,10 @@
                     <div class="galler-image-container">
                         <img src="./images/meal-4.jpg" alt="Levitation pizza">
                         <div class="image-container-des">
-                            <h2>Levitation pizza</h2>
-                            <p>Levitation pizza on black background.</p>
+                            <div class="des-text-cont">
+                                <h2>Levitation pizza</h2>
+                                <p>Levitation pizza on black background.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -185,8 +191,10 @@
                     <div class="galler-image-container">
                         <img src="./images/meal-7.jpg" alt="Frittata">
                         <div class="image-container-des">
-                            <h2>Frittata</h2>
-                            <p>Frittata or potato pie in a ceramic plate</p>
+                            <div class="des-text-cont">
+                                <h2>Frittata</h2>
+                                <p>Frittata or potato pie in a ceramic plate</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,8 +203,10 @@
                     <div class="galler-image-container">
                         <img src="./images/meal-2.jpg" alt="Beef steaks">
                         <div class="image-container-des">
-                            <h2>Beef steaks</h2>
-                            <p>Tasty beef steaks flying above cast iron grate with fire flames.</p>
+                            <div class="des-text-cont">
+                                <h2>Beef steaks</h2>
+                                <p>Tasty beef steaks flying above cast iron grate with fire flames.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,8 +214,10 @@
                     <div class="galler-image-container">
                         <img src="./images/meal-5.jpg" alt="Crispy Fried Chicken">
                         <div class="image-container-des">
-                            <h2>Crispy Fried Chicken</h2>
-                            <p>Golden brown chicken legs with a crunchy coating and juicy meat</p>
+                            <div class="des-text-cont">
+                                <h2>Crispy Fried Chicken</h2>
+                                <p>Golden brown chicken legs with a crunchy coating and juicy meat</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -213,16 +225,19 @@
                     <div class="galler-image-container">
                         <img src="./images/meal-6.jpg" alt="Lyulya kebab">
                         <div class="image-container-des">
-                            <h2>Lyulya kebab</h2>
-                            <p>Tender and juicy skewers of ground lamb or beef, flavored with aromatic spices and
-                                herbs
-                            </p>
+                            <div class="des-text-cont">
+                                <h2>Lyulya kebab</h2>
+                                <p>Tender and juicy skewers of ground lamb or beef, flavored with aromatic spices and
+                                    herbs
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="contact" id="contact">
         <div class="contact-container">
             <div class="contact-title chefs-title">
@@ -375,17 +390,57 @@
 
     <!-- <script src="./hhh.js"></script> -->
     <script>
-        function darkmodes() {
-            document.body.classList.add('dark-mode');
-            document.getElementById("enableWhiteModeBtn").style.display = "block";
-            document.getElementById("enableDarkModeBtn").style.display = "none";
+        // function darkmodes() {
+        //     document.body.classList.add('dark-mode');
+        //     document.getElementById("enableWhiteModeBtn").style.display = "block";
+        //     document.getElementById("enableDarkModeBtn").style.display = "none";
 
+        // }
+        // function whitemode() {
+        //     document.body.classList.remove('dark-mode');
+        //     document.getElementById("enableWhiteModeBtn").style.display = "none";
+        //     document.getElementById("enableDarkModeBtn").style.display = "block";
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function darkmodes() {
+            const body = document.body;
+            const button = document.getElementById('enableDarkModeBtn');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            function toggleDarkMode() {
+                if (body.classList.contains('dark-mode')) {
+                    body.classList.remove('dark-mode');
+                    button.innerHTML = '<i class="fa-regular fa-sun"></i>';
+                } else {
+                    body.classList.add('dark-mode');
+                    button.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                }
+            }
+
+            if (prefersDarkScheme) {
+                body.classList.add('dark-mode');
+                button.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            } else {
+                body.classList.remove('dark-mode');
+                button.innerHTML = '<i class="fa-regular fa-sun"></i>';
+            }
+
+            button.addEventListener('click', toggleDarkMode);
         }
-        function whitemode() {
-            document.body.classList.remove('dark-mode');
-            document.getElementById("enableWhiteModeBtn").style.display = "none";
-            document.getElementById("enableDarkModeBtn").style.display = "block";
-        }
+
+        DarkWhiteToggle();
     </script>
 
 
