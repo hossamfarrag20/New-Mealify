@@ -1,0 +1,524 @@
+.dark-mode {
+    --hov-color: #D78C23;
+    --span-button-color-i: #C17E1F;
+    --text-button-color: #0D0D0D;
+    --home-text-card: #9F9F9F;
+    --home-circle: #252525;
+    --nav-color: #171717;
+    --background-color: #202020;
+    --text-white: white;
+}
+
+@media screen and (min-width: 300px) {
+    .home-buttons {
+        width: 292px;
+        display: flex;
+        justify-content: space-between;
+        transform: translateX(-5%);
+
+    }
+
+    .home-buttons a {
+        padding: 0px 20px;
+    }
+
+}
+
+@media screen and (min-width: 350px) {
+    .home-buttons {
+        width: 310px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        transform: translateX(-5%);
+    }
+
+    .home-buttons a {
+        padding: 0px 30px;
+    }
+}
+
+@media screen and (min-width: 390px) {
+    .home-buttons {
+        transform: translateX(0%);
+    }
+
+}
+
+
+@media screen and (min-width: 680px) {
+    .home-text h3 {
+        width: 70%;
+        margin: 50px auto;
+    }
+
+    .home-image {
+        width: 80%;
+        margin: auto;
+    }
+
+    .home-buttons {
+        width: 350px;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .home-text h3 {
+        width: 60%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .home-image {
+        width: 80%;
+        margin: auto;
+    }
+
+    .home-buttons {
+        width: 350px;
+        margin: auto;
+    }
+
+    .chefs-container-of-images {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .chefs-container-of-images .chefs-container {
+        margin: 0;
+    }
+
+    .chefs-container {
+        width: 50%;
+    }
+
+    .gallery-container-for-screen {
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr;
+        gap: 20px 20px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "item1 item3"
+            "item5 item3"
+            "item2 item3"
+            "item2 item6"
+            "item2 item7"
+            "item4 .";
+    }
+
+    .item1 {
+        grid-area: item1;
+    }
+
+    .item5 {
+        grid-area: item5;
+    }
+
+    .item2 {
+        grid-area: item2;
+    }
+
+    .item4 {
+        grid-area: item4;
+        transform: translateY(-40%);
+    }
+
+    .item3 {
+        grid-area: item3;
+    }
+
+    .item6 {
+        grid-area: item6;
+    }
+
+    .item7 {
+        grid-area: item7;
+    }
+
+    .gallery {
+        padding-bottom: 0;
+    }
+
+    .map {
+        width: 95%;
+        margin: auto;
+
+    }
+
+    .contact-inf {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }
+
+    .contact-info-card {
+        width: 49%;
+        padding: 15px;
+    }
+
+    .contact-inputs {
+        width: 90%;
+        margin: auto;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .footer-first,
+    .footer-last {
+        width: 45%;
+    }
+
+
+    .footer-last {
+        order: -1;
+    }
+
+    .footer-submit {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-submit input {
+        width: 79%;
+    }
+
+    .footer-submit button {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    .home {
+        justify-content: space-around;
+
+    }
+
+    .home-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        width: fit-content;
+    }
+
+    .home-text {
+        margin: 0;
+        text-align: left;
+        width: 450px;
+        margin: 40px 50px;
+    }
+
+    .home-text h3 {
+        width: 350px;
+        margin: 0;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+
+    .sed {
+        width: 70%;
+        margin-left: 15px;
+
+    }
+
+    .home-image {
+        width: 450px;
+
+    }
+
+    .home-buttons {
+        width: 320px;
+        margin-left: 15px;
+    }
+
+    .home-buttons a {
+        border-top-left-radius: 0;
+    }
+
+    .chefs-container-of-images {
+        flex-wrap: nowrap;
+    }
+
+    .gallery-container-for-screen {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr;
+        gap: 20px 10px;
+        /* grid-auto-flow: row; */
+        grid-template-areas:
+            "item1 item1 item3 item3 item5 item5"
+            "item1 item1 item3 item3 item5 item5"
+            "item2 item2 item3 item3 item6 item6"
+            "item2 item2 item3 item3 item6 item6"
+            "item2 item2 . . item7 item7"
+            "item2 item2 item4 item4 item7 item7"
+            ". . item4 item4 . .";
+    }
+
+    .item1 {
+        grid-area: item1;
+    }
+
+    .item2 {
+        grid-area: item2;
+    }
+
+    .item3 {
+        grid-area: item3;
+    }
+
+    .item4 {
+        grid-area: item4;
+        transform: translateY(5%);
+    }
+
+    .item5 {
+        grid-area: item5;
+    }
+
+    .item6 {
+        grid-area: item6;
+    }
+
+    .item7 {
+        grid-area: item7;
+    }
+
+    .gallery-images {
+        margin: 0;
+    }
+
+    .map {
+        width: 90%;
+        margin: auto;
+    }
+
+    .contact-inf {
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+    }
+
+    .contact-info-card {
+        width: 49%;
+    }
+
+    .contact-inputs {
+        width: 87%;
+        margin: auto;
+    }
+
+    .footer-seconed {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (min-width: 1201px) {
+
+    .nav-items {
+        display: none;
+    }
+
+    .nav-links-screen {
+        display: block;
+    }
+
+    .nav-links-screen a {
+        text-decoration: none;
+        color: var(--home-text-card, #a29a9a);
+        margin: 30px 10px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        padding-bottom: 5px;
+        transition: 0.5s all;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .nav-links-screen a::after {
+        content: '';
+        background-color: var(--span-button-color-i, #CE1212);
+        height: 2px;
+        bottom: 0;
+        width: 0px;
+        left: 0;
+        transform: translateY(100%);
+        position: absolute;
+        transition: 0.5s all;
+    }
+
+    .nav-links-screen a:hover {
+        color: var(--text-white, black);
+    }
+
+    .nav-links-screen a:hover::after {
+        width: 100%;
+    }
+
+    body:not(body:has(:target)) a[href="#home"]::after,
+    body:has(.home:target) a[href="#home"]::after,
+    body:has(.chefs:target) a[href="#chefs"]::after,
+    body:has(.gallery:target) a[href="#gallery"]::after,
+    body:has(.contact:target) a[href="#contact"]::after {
+
+        width: 100%;
+    }
+
+    .home {
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+
+    }
+
+    .home {
+        padding: 140px 0 100px 0;
+    }
+
+
+    .home-image {
+        width: 500px;
+    }
+
+    .home-text {
+        margin: 40px 200px 0 0;
+
+    }
+
+    .home-text h3 {
+        width: 500px;
+    }
+
+    .small-inputs {
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .small-inputs input {
+        width: 49%;
+        justify-content: space-between;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .footer-first,
+    .footer-last {
+        width: 25%;
+        box-sizing: border-box;
+    }
+
+    .footer-seconed {
+        width: 46%;
+        order: 2;
+        box-sizing: border-box;
+
+    }
+
+    .footer-first {
+        margin-top: 10px;
+        order: 1;
+    }
+
+    .footer-last {
+        order: 3;
+        box-sizing: border-box;
+    }
+
+    .footer-submit input,
+    .footer-submit button {
+        padding: 10px 4px;
+    }
+
+    .gallery-container-for-screen {
+        padding-bottom: 0px;
+    }
+
+    .map {
+        width: 90%;
+    }
+
+    .contact-inf {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1401px) {
+
+    .home-container {
+        align-items: center;
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .home-text h3 {
+        width: 500px;
+    }
+
+    .home-text {
+        margin-top: 0;
+        width: 50%;
+    }
+
+    .sed {
+        width: 500px;
+    }
+
+    .home-image {
+        width: 50%;
+        margin: 0;
+    }
+
+    .home-image img {
+        width: 500px;
+
+    }
+
+    .chefs-container-of-images {
+        width: 90%;
+        margin: auto;
+    }
+
+    .gallery-container-for-screen {
+        width: 90%;
+        margin: auto;
+    }
+
+    .contact-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .contact-inputs {
+        width: 79%;
+        margin: auto;
+    }
+
+    .footer-container {
+        width: 95%;
+        margin: auto;
+    }
+
+}
